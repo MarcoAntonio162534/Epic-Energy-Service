@@ -1,0 +1,803 @@
+{
+	"info": {
+		"_postman_id": "9c34d25a-ba2f-4628-b68f-435ceeb4c8c6",
+		"name": "EPIC ENERGY SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "comune",
+			"item": [
+				{
+					"name": "SAVE COMUNE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Aaren\",\r\n    \"provincia\":{\r\n            \"id\":\"97\",\r\n            \"nome\":\"Torino\",\r\n            \"sigla\":\"TO\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/comunecontroller/savecomune",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"comunecontroller",
+								"savecomune"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE COMUNE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"7905\",\r\n    \"nome\": \"Zubizarreta\",\r\n    \"provincia\": {\r\n        \"id\": \"97\",\r\n        \"nome\": \"Torino\",\r\n        \"sigla\": \"TO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/comunecontroller/updatecomune",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"comunecontroller",
+								"updatecomune"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "indirizzo",
+			"item": [
+				{
+					"name": "SAVE INDIRIZZO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"via\":\"via pace\",\r\n\"civico\":\"125\",\r\n\"cap\":\"20045\",\r\n\"localita\":\"rho\",\r\n\"comune\":\r\n{\r\n    \"id\":\"52\",\r\n    \"nome\":\"Cantalupa\",\r\n    \"provincia\":{\r\n        \"id\":\"97\",\r\n        \"nome\":\"Torino\",\r\n        \"sigla\":\"TO\"\r\n    }\r\n\r\n}\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/indirizzocontroller/saveindirizzo",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"indirizzocontroller",
+								"saveindirizzo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE INDIRIZZO BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/indirizzocontroller/deleteindirizzo?id=1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"indirizzocontroller",
+								"deleteindirizzo"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE INDIRIZZO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"via\":\"via guerra\",\r\n\"civico\":\"125\",\r\n\"cap\":\"20045\",\r\n\"localita\":\"rho\",\r\n\"comune\":\r\n{\r\n    \"id\":\"52\",\r\n    \"nome\":\"Cantalupa\",\r\n    \"provincia\":{\r\n        \"id\":\"97\",\r\n        \"nome\":\"Torino\",\r\n        \"sigla\":\"TO\"\r\n    }\r\n\r\n}\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/indirizzocontroller/updateindirizzo/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"indirizzocontroller",
+								"updateindirizzo",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "provincia",
+			"item": [
+				{
+					"name": "SAVE PROVINCIA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"papaya\",\r\n    \"sigla\":\"9502\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/provinciacontroller/saveprovincia",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"provinciacontroller",
+								"saveprovincia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PROVINCIA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"nome\":\"fiodo\",\r\n    \"sigla\":\"95cb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/provinciacontroller/updateprovincia/111",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"provinciacontroller",
+								"updateprovincia",
+								"111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "SAVE CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ragioneSociale\":\"Farlocchi Inc.\",\r\n    \"partitaIva\":\"06581590250\",\r\n    \"tipoCliente\":\"SPA\",\r\n    \"email\":\"zubiza@faro.fr\",\r\n    \"pec\":\"zubizapec@faro.fr\",\r\n    \"telefono\":\"058754359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantalone\",\r\n    \"telefonoContatto\":\"050125125\",\r\n    \"emailContatto\":\"mpanta@faro.fr\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Sottomonte\",\r\n        \"civico\":\"154\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Sassonero\",\r\n        \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Pisana\",\r\n        \"civico\":\"22\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Pietroconti\",\r\n        \"comune\":{\r\n            \"id\":\"32\",\r\n            \"nome\":\"Bosconero\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":\"2500000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/clientecontroller/savecliente",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"savecliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CLIENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ragioneSociale\":\"Bartolomeo Inc.\",\r\n    \"partitaIva\":\"06581590250\",\r\n    \"tipoCliente\":\"SPA\",\r\n    \"email\":\"zubiza@faro.fr\",\r\n    \"pec\":\"zubizapec@faro.fr\",\r\n    \"telefono\":\"058754359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantalone\",\r\n    \"telefonoContatto\":\"050125125\",\r\n    \"emailContatto\":\"mpanta@faro.fr\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Sottomonte\",\r\n        \"civico\":\"154\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Sassonero\",\r\n        \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Pisana\",\r\n        \"civico\":\"22\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Pietroconti\",\r\n        \"comune\":{\r\n            \"id\":\"32\",\r\n            \"nome\":\"Bosconero\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":\"2500000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/clientecontroller/updatecliente/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"updatecliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER CLIENTE BY RAGIONE SOCIALE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/orderclientibyragionesociale",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"orderclientibyragionesociale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER CLIENTE BY NOME",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/orderclientibynome",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"orderclientibynome"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER CLIENTE BY FATTURATO ANNUALE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/orderclientibyfatturatoannuale",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"orderclientibyfatturatoannuale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER CLIENTE BY DATA DI INSERIMENTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/orderclientibydatadiinserimento",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"orderclientibydatadiinserimento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER CLIENTE BY DATA ULTIMO CONTATTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/orderclientibydataultimocontatto",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"orderclientibydataultimocontatto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ORDER CLIENTE BY PROVINCIA SEDE LEGALE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/orderclientibyprovinciasedelegale",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"orderclientibyprovinciasedelegale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND CLIENTE BY FATTURATO ANNUALE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/findclientebyfatturatoannuale?fatturatoAnnuale=2500000&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"findclientebyfatturatoannuale"
+							],
+							"query": [
+								{
+									"key": "fatturatoAnnuale",
+									"value": "2500000"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND CLIENTE BY DATA INSERIMENTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/findclientebydatainserimento?dataInserimento=2018-06-25&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"findclientebydatainserimento"
+							],
+							"query": [
+								{
+									"key": "dataInserimento",
+									"value": "2018-06-25"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND CLIENTE BY DATA ULTIMO CONTATTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/findclientebydataultimocontatto?dataUltimoContatto=2021-04-11&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"findclientebydataultimocontatto"
+							],
+							"query": [
+								{
+									"key": "dataUltimoContatto",
+									"value": "2021-04-11"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND CLIENTE BY PARTE DEL NOME",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/clientecontroller/findclientebypartedelnome?ragioneSociale=bar&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"clientecontroller",
+								"findclientebypartedelnome"
+							],
+							"query": [
+								{
+									"key": "ragioneSociale",
+									"value": "bar"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "fattura",
+			"item": [
+				{
+					"name": "SAVE FATTURA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"cliente\":{\r\n\r\n    \"id\":\"2\",\r\n    \"ragioneSociale\":\"Farlocchi Inc.\",\r\n    \"partitaIva\":\"06581590250\",\r\n    \"tipoCliente\":\"SPA\",\r\n    \"email\":\"zubiza@faro.fr\",\r\n    \"pec\":\"zubizapec@faro.fr\",\r\n    \"telefono\":\"058754359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantalone\",\r\n    \"telefonoContatto\":\"050125125\",\r\n    \"emailContatto\":\"mpanta@faro.fr\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Sottomonte\",\r\n        \"civico\":\"154\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Sassonero\",\r\n        \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Pisana\",\r\n        \"civico\":\"22\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Pietroconti\",\r\n        \"comune\":{\r\n            \"id\":\"32\",\r\n            \"nome\":\"Bosconero\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":\"2500000\"\r\n},\r\n\r\n    \"data\":\"2020-08-16\",\r\n    \"numero\":\"125\",\r\n    \"anno\":\"2020\",\r\n    \"importo\":\"300\",\r\n    \"stato\":{\r\n        \"id\":\"1\",\r\n        \"nome\":\"pagata\"\r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/fatturacontroller/save",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"fatturacontroller",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE FATTURA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"cliente\":{\r\n\r\n    \"id\":\"2\",\r\n    \"ragioneSociale\":\"Farlocchi Inc.\",\r\n    \"partitaIva\":\"06581590250\",\r\n    \"tipoCliente\":\"SPA\",\r\n    \"email\":\"zubiza@faro.fr\",\r\n    \"pec\":\"zubizapec@faro.fr\",\r\n    \"telefono\":\"058754359\",\r\n    \"nomeContatto\":\"Mario\",\r\n    \"cognomeContatto\":\"Pantalone\",\r\n    \"telefonoContatto\":\"050125125\",\r\n    \"emailContatto\":\"mpanta@faro.fr\",\r\n    \"indirizzoSedeOperativa\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Sottomonte\",\r\n        \"civico\":\"154\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Sassonero\",\r\n        \"comune\":{\r\n            \"id\":\"21\",\r\n            \"nome\":\"Bardonecchia\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"indirizzoSedeLegale\":{\r\n        \"id\":\"2\",\r\n        \"via\":\"Via Pisana\",\r\n        \"civico\":\"22\",\r\n        \"cap\":\"56025\",\r\n        \"localita\":\"Pietroconti\",\r\n        \"comune\":{\r\n            \"id\":\"32\",\r\n            \"nome\":\"Bosconero\",\r\n            \"provincia\":{\r\n                \"id\":\"98\",\r\n                \"nome\":\"Torino\",\r\n                \"sigla\":\"TO\"\r\n            }\r\n        }\r\n    },\r\n    \"dataInserimento\":\"2018-06-25\",\r\n    \"dataUltimoContatto\":\"2021-04-11\",\r\n    \"fatturatoAnnuale\":\"2500000\"\r\n},\r\n\r\n    \"data\":\"2020-08-16\",\r\n    \"numero\":\"125\",\r\n    \"anno\":\"2020\",\r\n    \"importo\":\"300\",\r\n    \"stato\":{\r\n        \"id\":\"1\",\r\n        \"nome\":\"non pagata\"\r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/fatturacontroller/update/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"fatturacontroller",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND FATTURA BY CLIENTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/fatturacontroller/findfatturabycliente?id=1&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"fatturacontroller",
+								"findfatturabycliente"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND FATTURA BY STATO FATTURA PAGATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/fatturacontroller/findfatturabystato?stato=pagata&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"fatturacontroller",
+								"findfatturabystato"
+							],
+							"query": [
+								{
+									"key": "stato",
+									"value": "pagata"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND FATTURA BY DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/fatturacontroller/findfatturabydata?data=2020-08-16&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"fatturacontroller",
+								"findfatturabydata"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "2020-08-16"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND FATTURA BY ANNO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/fatturacontroller/findfatturabyanno?anno=2020&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"fatturacontroller",
+								"findfatturabyanno"
+							],
+							"query": [
+								{
+									"key": "anno",
+									"value": "2020"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND FATTURA BY IMPORTO BETWEEN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/fatturacontroller/findfatturabyimporto?value1=1&value2=1000&page=0&size=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"fatturacontroller",
+								"findfatturabyimporto"
+							],
+							"query": [
+								{
+									"key": "value1",
+									"value": "1"
+								},
+								{
+									"key": "value2",
+									"value": "1000"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "REGISTRAZIONE UTENTE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"PlayTicci\",\r\n    \"email\":\"marcoantonio@gmail.com\",\r\n    \"password\":\"1234\",\r\n    \"nome\":\"Marco Antonio\",\r\n    \"cognome\":\"De Cicco\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/usercontroller/signup",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"usercontroller",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"PlayTicci\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/usercontroller/login",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"usercontroller",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
