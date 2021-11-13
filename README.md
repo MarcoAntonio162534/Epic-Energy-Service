@@ -4,4 +4,4 @@
 
 - Per la lettura dei file csv di comuni e provincie utilizzare la classe "Runner" nel package principale.
 
--Nei controller di Cliente e Fattura sono presenti alcuni metodi ovviamente duplicati per poter essere funzionanti sia per Postaman che sul web(controllare gli endpoint ).
+- Nei controller di Cliente e Fattura sono presenti alcuni metodi ovviamente duplicati per poter essere funzionanti sia per Postaman che sul web(controllare gli endpoint ).
